@@ -9,13 +9,14 @@ var length = {
 }
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
 "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ]
-letters.toUppercase ()
-
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-
 var specialCharacters = [ '!', '"',  '#', '$',  '%',  '&', "'",  '(', ' )', ' *',
  '+', ' ,', '-', '.', '/',  ':', ';', '<', '=', '>', '?', '@', '[',  ']', '^', ' _', '`', '{',
   '|',  '}', '~', ]
+var numberCharacters
+var lowercase
+var chooseNumbers
+var chooseSpecial
 
 function writePassword() {
 
