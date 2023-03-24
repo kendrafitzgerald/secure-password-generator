@@ -20,6 +20,7 @@ var chooseUppercase
 var chooseNumbers
 var chooseSpecial
 var passwordChoice=[]
+var finalPassword=[]
 
     var passwordLength=window.prompt("Choose a password length between 8 and 128.");
   if (passwordLength <8 || passwordLength >128) {
@@ -37,8 +38,6 @@ var passwordChoice=[]
       return;
     }
 
-    passwordChoice
-
     if(chooseLowercase) {
       passwordChoice=letters;
     } 
@@ -53,15 +52,15 @@ var passwordChoice=[]
       passwordChoice=passwordChoice.concat(specialCharacters)
     }
 
+    for (var i=0; i < passwordLength; i++) {
+      finalPassword.push(passwordChoice[Math.floor(Math.random() * passwordChoice.length)])
 
+    }
+    return finalPassword.join("");
 
   }
 
 function writePassword() { 
-
- 
- 
- 
  var password = generatePassword();
  var passwordText = document.querySelector("#password");
 
