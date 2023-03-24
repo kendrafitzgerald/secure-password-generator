@@ -53,9 +53,10 @@ var finalPassword=[]
     }
 
     for (var i=0; i < passwordLength; i++) {
-      finalPassword.push(passwordChoice[Math.floor(Math.random() * passwordChoice.length)])
-
-    }
+      finalPassword.push(passwordChoice[Math.floor(Math.random() * passwordChoice.length)]);
+      console.log(finalPassword);
+      
+      }
     return finalPassword.join("");
 
   }
