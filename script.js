@@ -12,15 +12,14 @@ var specialCharacters = ['!', '"',  '#', '$',  '%',  '&', "'",  '(', ' )', ' *',
  '+', ' ,', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[',  ']', '^', ' _', '`', '{',
   '|',  '}', '~', '\\' ]
 
+function generatePassword() {
+
 var passwordLength
 var chooseLowercase
 var chooseUppercase
 var chooseNumbers
 var chooseSpecial
-var userChoice
-
-function generatePassword() {
-
+var passwordChoice=[]
 
     var passwordLength=window.prompt("Choose a password length between 8 and 128.");
   if (passwordLength <8 || passwordLength >128) {
@@ -38,9 +37,26 @@ function generatePassword() {
       return;
     }
 
-    
+    passwordChoice
+
+    if(chooseLowercase) {
+      passwordChoice=letters;
+    } 
+
+    if(chooseUppercase) {
+      passwordChoice= passwordChoice.concat(lettersUppercase);
+    }
+    if(chooseNumbers) {
+      passwordChoice= passwordChoice.concat(numbers);
+    }
+    if(chooseSpecial) {
+      passwordChoice=passwordChoice.concat(specialCharacters)
+    }
+
+
 
   }
+
 function writePassword() { 
 
  
